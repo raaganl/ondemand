@@ -1,0 +1,141 @@
+<style>
+    :root{
+        --text-grey: #52565A;
+        --background: #F9F9F9;
+        --component-background: #E0E0E0;
+        --warning: #FC4B4B;
+        --warning-text: #BC0000;
+        --normal: #4CA4BE;
+    }
+    .parent-container{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        margin-left:30px;
+    }
+    .data-parent-container{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        height:500px;
+        overflow:scroll;
+    }
+    .data-container{
+        display:flex;
+        flex-direction:column;
+        gap:5px;
+        width:300px;
+    }
+
+    .pretty-progressbar-container {
+    border-radius: 1000px;
+    height: 25px;
+    width:300px;
+    background-color: var(--component-background);
+    overflow: hidden;
+
+    }
+    .pretty-progressbar-full{
+        background-color: var(--warning);
+        width:90%;
+        height:100%;
+    }
+     .pretty-progressbar-safe{
+        background-color: var(--normal);
+        width:30%;
+        height:100%;
+    }
+
+    .parent-title{
+    font-size:1rem;
+    text-align: right;
+	color: var(--text-grey);
+    font-weight: 400;
+    }
+
+    .file-path{
+    font-size: 1.2rem;
+    font-weight: 500;
+    }
+    .percent{
+        font-size: 1rem;
+        font-weight:400;
+        color: var(--text-grey);
+    }
+    .storage-value{
+        font-size: 1rem;
+        font-weight:500;
+        color: var(--text-grey);
+        text-align: right;
+    }
+    h1,h2,h3{
+        margin:1.6px;
+    }
+    .pretty-progress-title{
+        font-size:1.3rem;
+        text-align:left;
+        color: var(--grey);
+        font-weight:300;
+    }
+</style>
+
+<%
+    def convertBytes(val)
+        case val
+        when /(\d+\.?\d*)B$/
+            $1.to_f
+        when /(\d+\.?\d*)K/
+            $1.to_f * 1_000
+        when /(\d+\.?\d*)M/
+            $1.to_f * 1_000_000
+        when /(\d+\.?\d*)G/
+            $1.to_f * 1_000_000_000
+        when /(\d+\.?\d*)T/
+            $1.to_f * 1_000_000_000_000
+        else
+            val.to_f
+        end
+    end
+
+    def storageClass(percent)
+        if percent.to_f > 90
+            return "pretty-progressbar-full"
+        else
+            return "pretty-progressbar-safe"
+        end
+    end
+    
+
+    storage_data = []
+
+    File.foreach("/home/exouser/ondemand/dev/dashboard/test.txt") do |line|
+    next unless line.strip.start_with?("/") 
+    parts = line.split
+    next if parts.length < 4
+    used  = parts[1]
+    total = parts[3]
+    next if total == 0
+
+    storage_data << {
+        path:    parts[0],
+        used:    parts[1],
+        total:   parts[3],
+        percent: ((convertBytes(used) / convertBytes(total)) * 100).round(2).clamp(0, 100)
+    }
+    end
+%>
+<div class = "parent-container">
+    <h1 class = "pretty-progress-title">Filesystem Storage</h3>
+    <div class = "data-parent-container">
+        <% storage_data.each do |s| %>
+        <div class="data-container">
+            <h2 class="file-path"><%= s[:path] %></h2>
+            <h3 class="percent"><%= s[:percent] %>% of Space Used</h3>
+            <div class="pretty-progressbar-container">
+            <div class="storage-value <%= storageClass((convertBytes(s[:used]).to_f / convertBytes(s[:total]).to_f) * 100) %>" style="width: <%= s[:percent] %>%"></div>
+            </div>
+            <h3 class="storage-value"><%= s[:used] %>/<%= s[:total] %></h3>
+        </div>
+        <% end %>
+    </div>
+</div>

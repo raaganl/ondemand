@@ -1,0 +1,13 @@
+announcement_path: "/home/exouser/ondemand/dev/dashboard/config/ondemand.d/announcement.md"
+dashboard_layout:
+  rows:
+    - columns:
+      - width: 8
+        widgets:
+          - pinned_apps
+          - motd
+      - width: 4
+        widgets:
+          - storage_data
+custom_css_files: ["pretty_progress.css"]
+

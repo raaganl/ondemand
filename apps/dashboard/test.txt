@@ -1,0 +1,167 @@
+------------------------------------------------------------------------
+                                       Used         Avail    Quota Limit
+------------------------------------------------------------------------
+/home/monaghaa                         1.7G          376M           2.0G
+/projects/monaghaa                     182G           69G           250G
+/scratch/alpine1                        29G         9508G          9537G
+/pl/active/BioKEM                    84345G        65655G        150000G
+Allocated Space: 150T
+Available Space: 66T
+Used Space: 85T
+        Used by data:           85T
+        Used by snapshot:       589M
+/pl/active/gyenis-lab                   41G         1959G          2000G
+Allocated Space: 2.0T
+Available Space: 2.0T
+Used Space: 41G
+        Used by data:           41G
+        Used by snapshot:       8.2M
+/pl/active/machinelearning            3978G           22G          4000G
+Allocated Space: 4.0T
+Available Space: 23G
+Used Space: 4.0T
+        Used by data:           4.0T
+        Used by snapshot:       5.9M
+/pl/active/JKL_IDEAL                 55398G          602G         56000G
+Allocated Space: 56T
+Available Space: 603G
+Used Space: 56T
+        Used by data:           56T
+        Used by snapshot:       7.6M
+/pl/active/JKL_OBS                     695G         2305G          3000G
+Allocated Space: 3.0T
+Available Space: 2.4T
+Used Space: 695G
+        Used by data:           695G
+        Used by snapshot:       5.9M
+/pl/active/JKL_REAL                 168944G        27056G        196000G
+Allocated Space: 196T
+Available Space: 28T
+Used Space: 169T
+        Used by data:           169T
+        Used by snapshot:       8.7M
+/pl/active/JKL_TEACHING               4684G          316G          5000G
+Allocated Space: 5.0T
+Available Space: 317G
+Used Space: 4.7T
+        Used by data:           4.7T
+        Used by snapshot:       8.6M
+/pl/active/gruberpeplab              12031G         2962G         14993G
+Allocated Space: 15T
+Available Space: 3.0T
+Used Space: 13T
+        Used by data:           13T
+        Used by snapshot:       7.6G
+/pl/active/HiuraLab                   2096G          904G          3000G
+Allocated Space: 3.0T
+Available Space: 905G
+Used Space: 2.1T
+        Used by data:           2.1T
+        Used by snapshot:       9.2M
+/pl/active/cabernet                   6760G         1240G          8000G
+Allocated Space: 8.0T
+Available Space: 1.3T
+Used Space: 6.8T
+        Used by data:           6.8T
+        Used by snapshot:       4.3M
+/pl/active/olm-data1                  5944G         4056G         10000G
+Allocated Space: 10T
+Available Space: 4.1T
+Used Space: 6.0T
+        Used by data:           6.0T
+        Used by snapshot:       5.8M
+/pl/active/olm-data3                 44144G         5856G         50000G
+Allocated Space: 50T
+Available Space: 5.9T
+Used Space: 45T
+        Used by data:           45T
+        Used by snapshot:       6.5M
+/pl/active/bottenus-lab               1367G          622G          1989G
+Allocated Space: 2.0T
+Available Space: 622G
+Used Space: 1.4T
+        Used by data:           1.4T
+        Used by snapshot:       12G
+/pl/active/OIT_DLS_BBA               17709G         2291G         20000G
+Allocated Space: 20T
+Available Space: 2.3T
+Used Space: 18T
+        Used by data:           18T
+        Used by snapshot:       4.5M
+/pl/active/OIT_DLS_CCS               17247G         1753G         19000G
+Allocated Space: 19T
+Available Space: 1.8T
+Used Space: 18T
+        Used by data:           18T
+        Used by snapshot:       5.2M
+/pl/active/OIT_DLS_ECHO              15685G         1315G         17000G
+Allocated Space: 17T
+Available Space: 1.4T
+Used Space: 16T
+        Used by data:           16T
+        Used by snapshot:       6.6M
+/pl/active/BoulderEM                181786G         8226G        190012G
+Allocated Space: 200T
+Available Space: 8.3T
+Used Space: 192T
+        Used by data:           183T
+        Used by snapshot:       9.4T
+/pl/active/BoulderEM-2                   1G        99999G        100000G
+Allocated Space: 100T
+Available Space: 100T
+Used Space: 5.1M
+        Used by data:           328K
+        Used by snapshot:       4.8M
+/pl/active/courses                    8254G         1746G         10000G
+Allocated Space: 10T
+Available Space: 1.8T
+Used Space: 8.3T
+        Used by data:           8.3T
+        Used by snapshot:       7.3M
+/pl/active/rcops                      1979G         3021G          5000G
+Allocated Space: 5.0T
+Available Space: 3.1T
+Used Space: 2.0T
+        Used by data:           2.0T
+        Used by snapshot:       161M
+/pl/active/VoeltzLab                 25001G            0G         25001G
+/pl/active/VoeltzLabEM               13276G        86724G        100000G
+Allocated Space: 100T
+Available Space: 87T
+Used Space: 14T
+        Used by data:           14T
+        Used by snapshot:       15M
+/pl/active/APPM                       6256G         1744G          8000G
+Allocated Space: 8.0T
+Available Space: 1.8T
+Used Space: 6.3T
+        Used by data:           6.3T
+        Used by snapshot:       7.4M
+/pl/active/ics                       31576G        13424G         45000G
+Allocated Space: 45T
+Available Space: 14T
+Used Space: 32T
+        Used by data:           32T
+        Used by snapshot:       412M
+/pl/active/crdds                      1715G          285G          2000G
+Allocated Space: 2.0T
+Available Space: 286G
+Used Space: 1.8T
+        Used by data:           1.8T
+        Used by snapshot:       5.8M
+/pl/active/del-lab                     340G          660G          1000G
+Allocated Space: 1.0T
+Available Space: 661G
+Used Space: 340G
+        Used by data:           340G
+        Used by snapshot:       36M
+/pl/active/Khan_CryoLab_Active       25379G         4620G         29999G
+Allocated Space: 30T
+Available Space: 4.7T
+Used Space: 26T
+        Used by data:           26T
+        Used by snapshot:       1.8G
+/pl/archive/WRFLES_GAD                  21T          4.4T            25T
+/pl/archive/regueiro_muri              357G          1.7T           2.0T
+/pl/archive/rcops                      1.1M          1.0T           1.0T
+/pl/archive/KhanCryoLabArchive            0          1.0T           1.0T

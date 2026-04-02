@@ -1,3 +1,4 @@
+#Data viz styling
 <style>
     :root{
         --text-grey: #52565A;
@@ -80,6 +81,7 @@
 </style>
 
 <%
+    #Converts storage size based on prefix for calculation purposes
     def convertBytes(val)
         case val
         when /(\d+\.?\d*)B$/
@@ -97,6 +99,7 @@
         end
     end
 
+    #changes color of progress bar - blue if < 90 and red if > 90
     def storageClass(percent)
         if percent.to_f > 90
             return "pretty-progressbar-full"
@@ -106,6 +109,9 @@
     end
     
 
+
+    # reads text file and looks for lines that start with a directory
+    # breaks line into four sections: directory, used, total, and percent
     storage_data = []
 
     File.foreach("/home/exouser/ondemand/dev/dashboard/test.txt") do |line|
@@ -125,6 +131,7 @@
     end
 %>
 <div class = "parent-container">
+    # Data display; loops through storage_data and displays the data
     <h1 class = "pretty-progress-title">Filesystem Storage</h3>
     <div class = "data-parent-container">
         <% storage_data.each do |s| %>
